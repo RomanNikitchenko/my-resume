@@ -1,80 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: rgb(163, 235, 167);
-  color: rgb(58, 27, 27);
+  font-family: sans-serif;
+  background-color: #f9f9fd;
 }
 
-/*соцсети*/
-.social-links .link {
-  color: teal;
+.menu {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  /*  Making ul.menu a Flex container  */
+  display: flex;
 }
 
-.social-links .link:hover,
-.social-links .link:focus {
-  color: orange;
+.menu > .item:not(:last-child) {
+  margin-right: 10px;
 }
 
-.social-links .link:active {
-  color: red;
+.menu .link {
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
 }
 
-/*расписание маршрута*/
-.schedule-body tr:hover {
-  background-color: tomato;
-  color: white;
-}
-
-.schedule-body tr td:hover {
-  background-color: rgb(161, 128, 78);
-  color: rgb(108, 187, 72);
-}
-
-.schedule {
-  border-collapse: collapse;
-}
-
-.schedule th,
-.schedule td {
-  padding: 8px;
-  border: 1px solid var(--brand-color);
-}
-
-/*переменная*/
-:root {
-  --brand-color: rgb(120, 75, 161);
-}
-
-/*секция тайтл*/
-.section {
-  border: 2px solid var(--brand-color);
-  margin: 10px 0px 10px 0;
-}
-
-.section-title {
-  color: var(--brand-color);
-  background-color: rgb(201, 65, 99);
-  margin-left: 10px;
-  padding-left: 10px;
-}
-
-/*блоки радуги переменные*/
-.alert {
-  --alert-taxt-color: rgb(255, 255, 255);
-  color: var(--alert-taxt-color);
-  --alert-backgraund-color: rgb(117, 23, 23);
-  background-color: var(--alert-backgraund-color);
-}
-
-.alert.success {
-  --alert-backgraund-color: green;
-  --alert-taxt-color: rgb(148, 40, 13);
-}
-
-.alert.warning {
-  --alert-backgraund-color: orange;
-  --alert-taxt-color: rgb(13, 132, 148);
-}
-
-.alert.error {
-  --alert-backgraund-color: red;
-  --alert-taxt-color: rgb(59, 189, 42);
+.menu .link:hover {
+  text-decoration: underline;
 }
